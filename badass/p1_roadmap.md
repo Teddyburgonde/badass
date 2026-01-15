@@ -5,7 +5,7 @@ Mettre en place un environnement fonctionnel avec **GNS3** et **Docker**, créer
 
 ---
 
-## ✅ Livrables attendus
+## Livrables attendus
 À la fin de la P1, tu dois avoir :
 
 - Une VM fonctionnelle
@@ -23,10 +23,10 @@ Mettre en place un environnement fonctionnel avec **GNS3** et **Docker**, créer
 ### Étape 1 – Préparer l’environnement
 **Objectif :** Avoir une base stable pour tout le projet.
 
-- Installer Docker dans la VM
-- Installer GNS3 dans la VM
-- Vérifier que GNS3 démarre correctement
-- Vérifier que GNS3 peut utiliser Docker
+- Installer Docker dans la VM |✅|
+- Installer GNS3 dans la VM ✅| 
+- Vérifier que GNS3 démarre correctement ✅|
+- Vérifier que GNS3 peut utiliser Docker |❌| 
 
 ---
 
@@ -88,7 +88,7 @@ Résultat attendu :
 
 ---
 
-## ✅ Fin de la P1
+##  Fin de la P1
 Si toutes les étapes ci-dessus sont validées, la **P1 est terminée** et prête pour l’évaluation.
 
 👉 Tu peux alors passer sereinement à la P2.
