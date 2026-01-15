@@ -16,3 +16,12 @@ sudo apt update
 sudo apt install -y gns3-gui gns3-server -> yes -> yes
 gns3 -> choisir run appliances on my local computer
 ```
+
+docker dans gns3
+
+```
+Dans le terminal -> sudo usermod -aG docker $USER
+Dans le termial -> docker run -d --name test-nginx -p 8080:80 nginx
+dans gns3 -> Edit -> preference -> new (normalement tu devrais voir ton image nginx)
+On laisse les parametres par defauts pour tout. 
+```

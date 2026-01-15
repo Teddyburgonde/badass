@@ -25,23 +25,41 @@ Mettre en place un environnement fonctionnel avec **GNS3** et **Docker**, créer
 
 - Installer Docker dans la VM |✅|
 - Installer GNS3 dans la VM ✅| 
-- Vérifier que GNS3 démarre correctement ✅|
-- Vérifier que GNS3 peut utiliser Docker |❌| 
+- Vérifier que GNS3 démarre correctement |✅|
+- Vérifier que GNS3 peut utiliser Docker |✅|
 
 ---
 
-### Étape 2 – Créer l’image Docker n°1 (Host)
-**Objectif :** Une machine simple pour tester la connectivité.
+# Étape 2 – Créer l’image Docker n°1 : Host
 
-Contraintes :
-- Base Linux (Alpine recommandé)
-- BusyBox (ou équivalent)
-- Aucune adresse IP configurée par défaut
+## Objectif
+Créer une machine Docker minimale qui servira de host de test dans GNS3.
 
-Résultat attendu :
-- L’image build correctement
-- Elle démarre sans erreur
-- Un shell est accessible
+## Étape 2.1 — Choisir la base de l’image
+- Utiliser une image Linux légère
+- Alpine Linux est recommandé
+
+## Étape 2.2 — Créer le Dockerfile
+- Créer un fichier Dockerfile
+- Base alpine
+- BusyBox
+- Aucun service inutile
+
+## Étape 2.3 — Pas de réseau
+- Ne pas configurer d’IP
+- GNS3 gérera le réseau
+
+## Étape 2.4 — Shell
+- Démarrer sur /bin/sh
+
+## Étape 2.5 — Build
+- Builder l’image
+- Nom : gns3-host
+
+## Étape 2.6 — Test
+- Lancer le conteneur
+- Vérifier l’accès au shell
+
 
 ---
 
