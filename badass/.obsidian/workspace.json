@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "p1_roadmap.md",
+                "file": "p2_roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "p1_roadmap"
+              "title": "p2_roadmap"
             }
           }
         ]
@@ -186,16 +186,17 @@
   },
   "active": "46f9e78197f3bd36",
   "lastOpenFiles": [
-    "p1/p1.zip",
+    "p2_roadmap.md",
+    "Brouillon.md",
     "Badass.md",
-    "Commandes.md",
     "p1_roadmap.md",
+    "p1/p1.zip",
+    "Commandes.md",
     "Dockerfile_router.md",
     "p1/router/Dockerfile",
     "p1/router",
     "p1/host/Dockerfile",
     "p1/host",
-    "Brouillon.md",
     "p1/Dockerfile",
     "p1",
     "Dockerfile.md",

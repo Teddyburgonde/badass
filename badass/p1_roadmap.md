@@ -134,7 +134,7 @@ Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu�
 
 ---
 
-### 6. Ouvrir les terminaux |❌|
+### 6. Ouvrir les terminaux |✅|
 - Clic droit sur **gns3-host** → `Console`
 - Clic droit sur **gns3-router** → `Console`
 
@@ -148,7 +148,7 @@ Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu�
 
 ---
 
-### Étape 5 – Rendu final
+### Étape 5 – Rendu final |✅|
 **Objectif :** Avoir un rendu propre et conforme au sujet.
 
 - Créer un dossier `P1/` à la racine du dépôt
@@ -160,8 +160,3 @@ Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu�
 - Exporter le projet GNS3 en **ZIP (portable project)**
 
 ---
-
-##  Fin de la P1
-Si toutes les étapes ci-dessus sont validées, la **P1 est terminée** et prête pour l’évaluation.
-
-👉 Tu peux alors passer sereinement à la P2.
