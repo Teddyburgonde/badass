@@ -30,54 +30,127 @@ Mettre en place un environnement fonctionnel avec **GNS3** et **Docker**, créer
 
 ---
 
-# Étape 2 – Créer l’image Docker n°1 : Host
+# Étape 2 – Créer l’image Docker n°1 : Host |✅|
 
 ## Objectif
 Créer une machine Docker minimale qui servira de host de test dans GNS3.
 
-## 1. Créer un Dockerfile
+## 1. Créer un Dockerfile |✅|
 - Crée un fichier nommé `Dockerfile`
 - Mets dedans :
 	- une image de base **Alpine**
 	- un shell `/bin/sh`
 
-## 2. Builder l'image
-- Build l’image Docker
+## 2. Builder l'image  |✅|
+- Build l’image Docker 
 - Nom de l'image gns3-host
-
-## 3. Tester l'image
-- Lance le conteneur
-- Vérifie que tu arrives sur un shell (`/bin/sh`)
+- ->docker build -t gns3-host . -> docker run -it gns3-host
 
 ---
 
-### Étape 3 – Créer l’image Docker n°2 (Routeur)
-**Objectif :** Une machine réseau complète.
+# Étape 3 – Image Docker n°2 (Routeur) |❌|
 
-Contraintes :
-- Un moteur de routage (Quagga ou FRRouting)
-- Service **BGP** actif
-- Service **OSPF** actif
-- Service **IS-IS** actif
-- BusyBox (ou équivalent)
-- Aucune adresse IP configurée par défaut
-
-⚠️ Les services doivent être présents et activables, pas forcément interconnectés.
+## 🎯 Objectif
+Créer une image Docker **routeur** utilisable dans GNS3.
 
 ---
 
-### Étape 4 – Intégration dans GNS3
-**Objectif :** Vérifier que les images fonctionnent dans GNS3.
+### 1. Choisir le logiciel de routage |✅|
+- Utiliser **FRRouting (FRR)**
+- C’est le plus simple et le plus moderne
 
-- Importer les deux images Docker dans GNS3
-- Créer un nouveau projet GNS3
-- Ajouter les deux machines au projet
-- Relier les machines
-- Ouvrir un terminal sur chaque machine
+---
 
-Résultat attendu :
-- Les machines démarrent
-- Les terminaux sont accessibles
+### 2. Créer un Dockerfile |✅|
+Dans ce Dockerfile, tu dois :
+- Partir d’une image Linux (**Alpine** ou **Debian**)
+- Installer **FRRouting**
+
+---
+
+### 3. Activer les services |✅|
+Les services suivants doivent pouvoir démarrer :
+- **BGP**
+- **OSPF**
+- **IS-IS**
+
+👉 Ils doivent être **présents et lançables**, rien de plus.
+
+---
+
+### 4. Avoir un shell |✅|
+- Le conteneur doit démarrer sur un **shell**
+- Tu dois pouvoir entrer dedans avec :
+```bash
+docker build -t gns3-router .
+docker run -it gns3-router 
+```
+
+---
+
+### 5. Builder l’image |✅|
+- Builder l’image Docker -> docker build -t gns3-router .
+
+---
+
+# Étape 4 – Intégration des images Docker dans GNS3
+
+## 🎯 Objectif
+Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu’elles fonctionnent correctement.
+
+---
+
+### 1. Ouvrir GNS3 |❌|
+- Lancer GNS3
+- Ouvrir ton projet **P1** ou créer un nouveau projet
+
+---
+
+### 2. Ajouter les images Docker |❌|
+- Aller dans `Edit` → `Preferences`
+- Aller dans `Docker` → `Docker containers`
+- Cliquer sur **New**
+- Ajouter l’image **gns3-host**
+- Ajouter l’image **gns3-router**
+- Ne rien modifier dans les options avancées
+
+---
+
+### 3. Créer le projet GNS3 |❌|
+- Aller dans `File` → `New blank project`
+- Donner un nom au projet (ex : `P1`)
+
+---
+
+### 4. Ajouter les machines au projet |❌|
+- Glisser **gns3-host** sur la zone de travail
+- Glisser **gns3-router** sur la zone de travail
+
+---
+
+### 5. Relier les machines |❌|
+- Utiliser l’outil câble
+- Relier **gns3-host** à **gns3-router**
+
+---
+
+### 6. Démarrer les machines |❌|
+- Démarrer les deux machines
+- Attendre qu’elles soient vertes
+
+---
+
+### 7. Ouvrir les terminaux |❌|
+- Clic droit sur **gns3-host** → `Console`
+- Clic droit sur **gns3-router** → `Console`
+
+---
+
+## ✅ Résultat attendu
+- Les deux machines démarrent
+- Les deux terminaux sont accessibles
+- Un shell est disponible sur chaque machine
+
 
 ---
 
