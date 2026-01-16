@@ -100,13 +100,13 @@ Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu�
 
 ---
 
-### 1. Ouvrir GNS3 |❌|
-- Lancer GNS3
-- Ouvrir ton projet **P1** ou créer un nouveau projet
+### 1. Ouvrir GNS3 |✅|
+- Lancer GNS3|✅|
+- Créer un nouveau projet **P1** |✅|
 
 ---
 
-### 2. Ajouter les images Docker |❌|
+### 2. Ajouter les images Docker |✅|
 - Aller dans `Edit` → `Preferences`
 - Aller dans `Docker` → `Docker containers`
 - Cliquer sur **New**
@@ -116,31 +116,25 @@ Utiliser les images **gns3-host** et **gns3-router** dans GNS3 et vérifier qu�
 
 ---
 
-### 3. Créer le projet GNS3 |❌|
-- Aller dans `File` → `New blank project`
-- Donner un nom au projet (ex : `P1`)
+### 3. Ajouter les machines au projet |✅|
+- Glisser **gns3-host** sur la zone de travail |✅|
+- Glisser **gns3-router** sur la zone de travail |✅|
 
 ---
 
-### 4. Ajouter les machines au projet |❌|
-- Glisser **gns3-host** sur la zone de travail
-- Glisser **gns3-router** sur la zone de travail
-
----
-
-### 5. Relier les machines |❌|
+### 4. Relier les machines  |✅|
 - Utiliser l’outil câble
-- Relier **gns3-host** à **gns3-router**
+- Relier **gns3-host** à **gns3-router**  |✅|
 
 ---
 
-### 6. Démarrer les machines |❌|
-- Démarrer les deux machines
-- Attendre qu’elles soient vertes
+### 5. Démarrer les machines  |✅|
+- Démarrer les deux machines  |✅|
+- Attendre qu’elles soient vertes  |✅|
 
 ---
 
-### 7. Ouvrir les terminaux |❌|
+### 6. Ouvrir les terminaux |❌|
 - Clic droit sur **gns3-host** → `Console`
 - Clic droit sur **gns3-router** → `Console`
 
