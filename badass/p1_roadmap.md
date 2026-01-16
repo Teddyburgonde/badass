@@ -35,31 +35,19 @@ Mettre en place un environnement fonctionnel avec **GNS3** et **Docker**, créer
 ## Objectif
 Créer une machine Docker minimale qui servira de host de test dans GNS3.
 
-## Étape 2.1 — Choisir la base de l’image
-- Utiliser une image Linux légère
-- Alpine Linux est recommandé
+## 1. Créer un Dockerfile
+- Crée un fichier nommé `Dockerfile`
+- Mets dedans :
+	- une image de base **Alpine**
+	- un shell `/bin/sh`
 
-## Étape 2.2 — Créer le Dockerfile
-- Créer un fichier Dockerfile
-- Base alpine
-- BusyBox
-- Aucun service inutile
+## 2. Builder l'image
+- Build l’image Docker
+- Nom de l'image gns3-host
 
-## Étape 2.3 — Pas de réseau
-- Ne pas configurer d’IP
-- GNS3 gérera le réseau
-
-## Étape 2.4 — Shell
-- Démarrer sur /bin/sh
-
-## Étape 2.5 — Build
-- Builder l’image
-- Nom : gns3-host
-
-## Étape 2.6 — Test
-- Lancer le conteneur
-- Vérifier l’accès au shell
-
+## 3. Tester l'image
+- Lance le conteneur
+- Vérifie que tu arrives sur un shell (`/bin/sh`)
 
 ---
 
