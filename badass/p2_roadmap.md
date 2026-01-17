@@ -21,13 +21,12 @@ P2/
 
 ## **Étape 3 — VXLAN en mode statique** |✅| 
  
-- Créer un **bridge `br0`**  |❌| 
-- Créer une interface **VXLAN (VNI = 10)**  |❌| 
-- Configurer les **remote IPs manuellement**  |❌| 
-- Attacher VXLAN et interface physique au bridge  |❌| 
-- Tester :  |❌| 
-    - ping
-    - capture réseau
+- Créer un **bridge `br0`**   |✅|  
+- Créer une interface **VXLAN (VNI = 10)**  |✅| 
+- Configurer les **remote IPs manuellement**  |✅| 
+- Attacher VXLAN et interface physique au bridge   |✅| 
+- Tester :   
+    - ping  |✅| 
     
 ## **Étape 4 — VXLAN en mode multicast** |❌|
 

@@ -10,11 +10,11 @@ ip link set br0 up
 
 
 # VXLAN statique
-ip link add vxlan10 type vxlan id 10 remote 10.0.0.2 dev enp0s3 dstport 4789
+ip link add vxlan10 type vxlan id 10 remote 10.0.0.2 dev eth0 dstport 4789
 ip link set vxlan10 up
 
 # Bridge attach
-ip link set enp0s3 master br0
+ip link set eth0 master br0
 ip link set vxlan10 master br0
 
 # IP sur le bridge
