@@ -6,20 +6,20 @@ P2/
 └── vxlan_multicast.sh
 
 
-## **Étape 1 — Créer le projet GNS3 P2 ** |❌| 
+## **Étape 1 — Créer le projet GNS3 P2 ** |✅| 
 
-- Créer un nouveau projet **P2** dans GNS3  |❌| 
-- Réutiliser les images Docker de la P1 :  |❌| 
+- Créer un nouveau projet **P2** dans GNS3  |✅| 
+- Réutiliser les images Docker de la P1 :  |✅| 
     - `gns3-host`
     - `gns3-router`
 
-## **Étape 2 — Construire la topologie** |❌|
+## **Étape 2 — Construire la topologie** |✅|
 
-- Placer **2 routeurs** (ou 2 machines selon le schéma du sujet)  |❌| 
-- Relier les machines avec des liens GNS3  |❌| 
-- Démarrer les machines  |❌| 
+- Placer **2 routeurs** (ou 2 machines selon le schéma du sujet)  |✅| 
+- Relier les machines avec des liens GNS3  |✅| 
+- Démarrer les machines  |✅| 
 
-## **Étape 3 — VXLAN en mode statique** |❌|
+## **Étape 3 — VXLAN en mode statique** |✅| 
  
 - Créer un **bridge `br0`**  |❌| 
 - Créer une interface **VXLAN (VNI = 10)**  |❌| 

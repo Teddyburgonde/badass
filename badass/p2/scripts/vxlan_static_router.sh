@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Nettoyage
+ip link del vxlan10 2>/dev/null
+ip link del br0 2>/dev/null
+
+# Bridge
+ip link add br0 type bridge
+ip link set br0 up
+
+# VXLAN statique
+ip link add vxlan10 type vxlan id 10 remote 10.0.0.1 dev enp0s3 dstport 4789
+ip link set vxlan10 up
+
+# Bridge attach
+ip link set enp0s3 master br0
+ip link set vxlan10 master br0
+
+# IP sur le bridge
+ip addr add 10.0.0.2/24 dev br0
