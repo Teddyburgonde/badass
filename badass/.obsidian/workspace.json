@@ -186,6 +186,8 @@
   },
   "active": "46f9e78197f3bd36",
   "lastOpenFiles": [
+    "p2/scripts/vxlan_multicast_router.sh",
+    "p2/scripts/vxlan_multicast_host.sh",
     "p2_roadmap.md",
     "Ressources.md",
     "p2/scripts/vxlan_static_router.sh",
@@ -202,7 +204,6 @@
     "p1_roadmap.md",
     "p1/p1.zip",
     "Dockerfile_router.md",
-    "p1/router/Dockerfile",
     "Dockerfile.md",
     "Installation.md"
   ]
