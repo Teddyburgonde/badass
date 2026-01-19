@@ -10,6 +10,9 @@ BGP est le protocole de routage qui fait fonctionner Internet
 P2 
 Pour utiliser VXLAN on le fais via ip link
 
+P2
+Le ping fonctionne, ce qui montre que le VXLAN multicast est bien en place et que les machines peuvent communiquer.
+
 
 
 

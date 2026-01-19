@@ -17,5 +17,5 @@ ip link set vxlan10 up
 ip link set eth0 master br0
 ip link set vxlan10 master br0
 
-# IP sur le bridge
+# Attribution de l'adresse IP au bridge
 ip addr add 10.0.0.1/24 dev br0
