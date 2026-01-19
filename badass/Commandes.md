@@ -50,3 +50,12 @@ ip addr show br0
 ping 10.0.0.1
 
 ```
+
+#### Tester la p1
+```
+- Ouvrir gns3
+- Ouvrir la p1
+- Ajouter, link les 2 machines et les demarer.  
+- Ouvrir les 2 consoles
+- Taper ip link dans chacune d'elle.
+```
