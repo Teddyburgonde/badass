@@ -53,11 +53,11 @@ But : configurer le routeur central qui relaie les informations.
 ## Étape 2 — Fichier `vtep1.conf` |❌|
 But : configurer un premier routeur VTEP.
 
-- Donner un **nom** au routeur |❌|
-- Définir un **numéro** (ASN) |❌|
-- Activer **OSPF** |❌|
-- Activer **BGP EVPN** |❌|
-- Déclarer le **RR** comme point central |❌|
+- Donner un **nom** au routeur |✅|
+- Définir un **numéro** (ASN) |✅|
+- Activer **OSPF** |✅|
+- Activer **BGP EVPN** |✅|
+- Déclarer le **RR** comme point central |✅|
 - Activer le **VXLAN** piloté par BGP |❌|
 
 ---
