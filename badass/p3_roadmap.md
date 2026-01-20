@@ -37,7 +37,7 @@ sur les machines connectées, grâce à **OSPF** et **BGP EVPN**.
 
 ---
 
-## Étape 1 — Fichier `rr.conf` (Route Reflector) |❌|
+## Étape 1 — Fichier `rr.conf` (Route Reflector) |✅|
 But : configurer le routeur central qui relaie les informations.
 
 - Donner un **nom** au routeur RR |✅|
@@ -58,9 +58,10 @@ But : configurer un premier routeur VTEP.
 - Activer **OSPF** |✅|
 - Activer **BGP EVPN** |✅|
 - Déclarer le **RR** comme point central |✅|
-- Activer le **VXLAN** piloté par BGP |❌|
+- Activer le **VXLAN** piloté par BGP |✅|
 
 ---
+
 
 ## Étape 3 — Fichier `vtep2.conf` |❌|
 But : configurer un second routeur VTEP.
