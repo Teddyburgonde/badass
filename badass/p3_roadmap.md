@@ -40,13 +40,13 @@ sur les machines connectées, grâce à **OSPF** et **BGP EVPN**.
 ## Étape 1 — Fichier `rr.conf` (Route Reflector) |❌|
 But : configurer le routeur central qui relaie les informations.
 
-- Donner un **nom** au routeur RR |❌|
-- Définir un **numéro** (ASN) |❌|
-- Activer **OSPF** pour que le RR puisse parler aux autres routeurs |❌|
-- Activer **BGP EVPN** |❌|
-- Configurer le RR pour : |❌|
-  - recevoir les informations des VTEP |❌|
-  - les redistribuer aux autres VTEP |❌|
+- Donner un **nom** au routeur RR |✅|
+- Définir un **numéro** (ASN) |✅|
+- Activer **OSPF** pour que le RR puisse parler aux autres routeurs |✅|
+- Activer **BGP EVPN** |✅|
+- Configurer le RR pour : |✅|
+  - recevoir les informations des VTEP |✅|
+  - les redistribuer aux autres VTEP |✅|
 
 ---
 
