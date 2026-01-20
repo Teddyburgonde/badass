@@ -79,3 +79,10 @@ ip link
 
 
 ```
+
+Commande pour lancer le script 
+
+```
+chmod +x vxlan_vtep1.sh
+./vxlan_vtep1.sh
+```
