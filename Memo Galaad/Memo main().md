@@ -1,4 +1,6 @@
 
+[[BusyBox]] = Le logiciel qui permet à tes petits Dockers d'avoir des commandes Linux sans prendre de place.
+
 **Rappel Notion adresse ip de base :**
 [[Notation CIDR]] ( le /24  après l'adresse IP)
 
@@ -23,6 +25,8 @@ Mais comment elle fait si les deux machine sont à l'autre bout de la planète, 
 [[VXLAN]]
 Le VXLAN permet de faire un périmètre LAN plus modulable !
 
+[[VLAN]] (et pourquoi VXLAN est mieux)
+
 [[VTEP (VXLAN Tunnel End Point)]] = C'est le nom du "postier" (ton routeur ou switch) qui emballe et déballe les trames en format VXLAN.
 
 [[EVPN]] = (_Ethernet Virtual Private Network_)
@@ -31,10 +35,12 @@ Le VXLAN permet de faire un périmètre LAN plus modulable !
 C'est le messager entre les VTEP, genre c'est ce qui gere leurs communication entre eux. Et l'EVPN est une carte utilisé par BGP pour savoir a qui envoyer. Et BGP va utiliser les chemain cree par OSPF entre les VTEP.
 Et donc BGP utilise EVPN pour savoir ou envoyer les infos, et utilise les route que lui donne OSPF ?
 
+[[Le RR (Route Reflector)]] = un routeur central ou tout le monde se connecte. Évite de devoir connecter tout les VTEP entre eux.
+
 [[Exemple VNI, VTEP, VXLAN]]
 **En résumé :** Le **VNI** est le numéro qui permet au routeur de séparer les différents réseaux virtuels qui voyagent dans le même tunnel. C'est l'identifiant de la "bulle" dont on parlait tout à l'heure.
 
-**La Loopback** = **adresse IP virtuelle** qu'on donne au routeur
+**La Loopback** = **adresse IP virtuelle** qu'on donne au routeur (son nom reel)
 
 [[OSPF et IS-IS]] = Ce sont des protocoles de routage dits **IGP** (Interior Gateway Protocol).
 **Leur seul but :** Faire en sorte que chaque routeur connaisse la route pour atteindre les **adresses IP physiques** et les **Loopbacks** des autres routeurs

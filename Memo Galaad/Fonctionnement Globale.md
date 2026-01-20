@@ -57,3 +57,20 @@ Maintenant, le VTEP 1 sait qu'il doit envoyer le paquet à l'adresse `2.2.2.2`. 
 - **BGP avec EVPN :** C'est le **Cerveau**. Il sait **QUI** est **OÙ** (L'association Docker <-> VTEP).
     
 - **OSPF (ou IS-IS) :** C'est les **Jambes**. Il sait **COMMENT** aller d'un VTEP à un autre (Le chemin entre les routeurs).
+
+
+
+
+### IMAGE DE CE QU'IL SE PASSE AVEC LE RR 
+
+- **Le Docker se branche :** Le VTEP-1 fait du **"Local Learning"**. Il découvre l'adresse MAC du Docker.
+    
+- **BGP se réveille :** Il crée un message appelé **NLRI** (Network Layer Reachability Information) de type **EVPN Route-Type 2**. C'est ça, ta "fiche".
+    
+- **OSPF travaille :** Il fournit la **Reachability** (l'accessibilité) entre l'IP du VTEP-1 et l'IP du RR.
+    
+- **Le RR reçoit la Route :** Il fait du **"Route Reflection"**. Il propage le NLRI EVPN vers le VTEP-2.
+    
+- **Le VTEP-2 enregistre :** Il installe cette info dans sa **L2RIB** (sa table EVPN locale).
+    
+- **Fin du processus :** Le plan de contrôle (**Control Plane**) est prêt.
