@@ -1,2 +1,3 @@
-FROM alpine
-CMD ["/bin/sh"]
+FROM alpine:latest
+
+RUN apk update && apk add busybox
