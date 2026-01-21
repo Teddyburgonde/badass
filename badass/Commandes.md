@@ -10,6 +10,8 @@ Supprimer tous les conteneurs gns3:
 
 docker ps -a | grep GNS3 | awk '{print $1}' | xargs -r docker rm -f
 
+docker rmi -f $(docker images -q)
+
 #### Tester la p1
 ```
 - Ouvrir gns3
