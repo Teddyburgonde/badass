@@ -29,6 +29,13 @@ Un logiciel de routage permet à une machine de décider où envoyer les paquets
 - OSPF : sert à trouver les routes à l’intérieur d’un réseau. ( les grandes entreprises)
 - IS-IS fait la même chose qu’OSPF, mais avec une autre méthode. (souvent les operateurs telephonique)
 
+Qu’est-ce que le service de moteur de routage demandé dans le sujet ?
+c’est IS-IS.
+
+Qu’est-ce que BusyBox demandé dans le sujet ?
+BusyBox est un ensemble d’outils Linux simples dans un seul programme.
+Il sert a tester le reseau avec ping par exemple.
+
 Pourquoi zebra est nécessaire ?
 Zebra est le service qui installe les routes dans la machine. 
 
