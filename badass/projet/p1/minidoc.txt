@@ -32,3 +32,8 @@ Un logiciel de routage permet à une machine de décider où envoyer les paquets
 Pourquoi zebra est nécessaire ?
 Zebra est le service qui installe les routes dans la machine. 
 
+
+couche2 couche3 ? 
+couche2 -> machine proche , utilise les adresses Mac 
+couche3 -> Sert a communiquer entre differents reseau, utilise les adresses ip 
+
