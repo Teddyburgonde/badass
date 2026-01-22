@@ -44,3 +44,24 @@ couche2 couche3 ?
 couche2 -> machine proche , utilise les adresses Mac 
 couche3 -> Sert a communiquer entre differents reseau, utilise les adresses ip 
 
+
+Entrer dans le contenauire 
+docker exec -it e64044bf35ac bash
+
+verife si les services tournes 
+
+vtysh
+
+# Vérifier BGP
+show ip bgp summary
+
+# Vérifier OSPF
+show ip ospf neighbor
+
+# Vérifier IS-IS
+show isis neighbor
+
+# Vérifier les interfaces
+show interface brief
+
+ou ps aux | grep frr
