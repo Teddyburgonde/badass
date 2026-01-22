@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# Nettoyage
+# Nettoyage des anciennes interfaces (si elles existent)
 ip link del vxlan10 2>/dev/null
 ip link del br0 2>/dev/null
 
-# Bridge
+# Création du bridge et activation du bridge
 ip link add br0 type bridge
 ip link set br0 up
 
