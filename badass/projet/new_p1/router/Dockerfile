@@ -2,7 +2,7 @@
 FROM quay.io/frrouting/frr:master
 
 COPY ./conf/daemons /etc/frr/daemons
-COPY .conf/frr.conf /etc/frr/frr.conf
+COPY ./conf/frr.conf /etc/frr/frr.conf
 
 # Change le propriétaire des fichiers pour l'utilisateur frr
 # (nécessaire car FRR s'exécute en
