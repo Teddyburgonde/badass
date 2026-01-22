@@ -1,3 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add busybox
+# Alpine includes BusyBox by default
+# Verify with: docker run <image> busybox --help
+
+RUN apk update

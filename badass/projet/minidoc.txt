@@ -65,3 +65,21 @@ show isis neighbor
 show interface brief
 
 ou ps aux | grep frr
+
+
+----
+
+Configuration de chaque host 
+
+ip addr add 10.1.1.10/24 dev eth0
+ip link set eth0 up
+ip route add default via 10.1.1.1
+ping 10.1.1.11
+
+2eme host 
+ip addr add 10.1.1.11/24 dev eth0
+ip link set eth0 up
+ip route add default via 10.1.1.1
+ping 10.1.1.10
+
+
