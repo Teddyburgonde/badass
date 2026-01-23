@@ -84,6 +84,20 @@ ping 10.1.1.10
 
 ---------
 
+test p1 
+- on cree un host et un routeur (ou plus si envie)
+- comme on a defini notre routeur sur le port 10.1.1.1, alors
+- on defini le port eth0 de notre host avec une ip :
+- a mettre dans le terminal de l'host
+docker exec -it <> sh
+ip route add default via 10.1.1.1
+ip addr add 10.1.1.2/24 dev eth0
+ip link set eth0 up
+- ensuite on peut tester de ping notre routeur :
+ping 10.1.1.1
+
+----------
+
 Test p2 static:
 
 - on met 2 routeur et 2 host 
