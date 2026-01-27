@@ -1,1 +1,0 @@
-https://github.com/TFHD/Bgp-At-Doors-of-Autonomous-Systems-is-Simple

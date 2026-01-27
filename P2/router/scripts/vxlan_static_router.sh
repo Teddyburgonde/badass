@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# On detecte qui on est (Assure-toi que les hostnames match dans GNS3)
+# On detecte qui on est 
 NAME=$(hostname)
 
 if [ "$NAME" = "gmersch-router-1" ]; then
-    MY_IP="10.1.1.1"
+    MY_IP="10.1.1.1" ; REMOTE="10.1.1.2"
 else
-    MY_IP="10.1.1.2"
+    MY_IP="10.1.1.2" ; REMOTE="10.1.1.1"
 fi
 
 # 1. Config physique
@@ -16,7 +16,7 @@ ip link set eth0 up
 # 2. Montage VXLAN
 ip link add br0 type bridge
 ip link set br0 up
-ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dev eth0 dstport 4789
+ip link add vxlan10 type vxlan id 10 remote $REMOTE dev eth0 dstport 4789
 ip link set vxlan10 up
 
 # 3. Branchement (eth1 vers le Host)
