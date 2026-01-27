@@ -16,4 +16,3 @@ ip link set dev vxlan10 master br0
 # Ajouter eth1 (interface vers le Host) au bridge
 ip link set dev eth1 master br0
 ip link set dev eth1 up
-

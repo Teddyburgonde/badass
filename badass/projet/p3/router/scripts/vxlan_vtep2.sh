@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # Créer l'interface VXLAN avec VNI 10
-ip link add vxlan10 type vxlan id 10 local 1.1.1.3 dstport 4789 nolearning
+ip link add vxlan10 type vxlan id 10 local 1.1.1.3 dstport 4789 nolearning 
 
-# Activer l'interface VXLAN
+#Activer l'interface VXLAN
 ip link set dev vxlan10 up
 
-# Créer le bridge 
+# Crée le bridge
 ip link add br0 type bridge
 ip link set br0 up
 

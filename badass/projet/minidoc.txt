@@ -121,5 +121,36 @@ ping 1.1.1.2
 - C'EST GG
 
 
+------------------
+
+
+test p3:
+
+- on met 3 routeur, un rr et 3 host dans gns3.
+
+- etape a faire pour tout les routeurs:
+- on ouvre un routeur :
+docker exec -it <> bash
+- on ouvre vtysh:
+vtysh
+- pour ouvrir le fichier conf :
+conf t
+- maintenant, on colle ici le bon vtep.conf correspondant.
+- ensuite, on sort de vtysh (avec exit) et on execute le script correspondant au vtep:
+sh /scripts/lescriptenquestion.sh
+on sort des routeurs.
+
+- Pour le RR, c'est pareil mais sans le script. il n'en a pas.
+- ensuite, pour chaque host, mettre cette ligne en changeant l'ip correspondante :
+ip addr add 192.168.1.1/24 dev eth0
+ip addr add 192.168.1.2/24 dev eth0
+ip addr add 192.168.1.3/24 dev eth0
+- depuis notre host1, on essaye de ping host2 :
+ping 192.168.1.2
+- ensuite dans le vtep1 on regarde si la table evpn est bien a jour :
+show evpn mac vni 10
+- On devrais voir une ligne avec la MAC de la BusyBox 2 et l'IP "Next Hop" 1.1.1.3
+
+
 
 
